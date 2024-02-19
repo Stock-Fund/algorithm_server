@@ -1,0 +1,14 @@
+# 端口配置
+server:
+  port: 8000
+  error:
+    path: /error
+  servlet:
+    context-path: /myGradle
+
+# 数据库配置
+#spring:
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/mydatabase
+#    username: dbuser
+#    password: dbpassword
