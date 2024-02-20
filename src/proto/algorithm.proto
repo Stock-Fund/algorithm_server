@@ -1,6 +1,0 @@
-syntax = "proto3";
-
-message Stock {
-  string name = 1;
-  int32 code = 2;
-}

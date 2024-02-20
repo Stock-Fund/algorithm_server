@@ -1,6 +1,7 @@
 plugins {
     id("org.springframework.boot") version "2.7.0"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
+    id("com.google.protobuf") version "0.8.17"
     id("java")
 }
 
@@ -11,9 +12,24 @@ repositories {
     mavenCentral()
 }
 
+//protobuf {
+//    // 配置 Protocol Buffers 插件的选项
+//    protoc {
+//        // 可选：指定 Protocol Buffers 编译器的路径，如果不设置会使用默认的
+//        path = "/path/to/protoc"
+//    }
+//    generateProtoTasks {
+//        all().forEach { task ->
+//            // 可选：配置生成的代码的输出路径
+//            // task.outputSubDir = "generated"
+//        }
+//    }
+//}
+
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("com.google.protobuf:protobuf-java:3.21.0")
     implementation("javax.websocket:javax.websocket-api:1.1")
     testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
